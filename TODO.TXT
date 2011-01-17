@@ -1,0 +1,21 @@
+- send a private message to user if error occurs
+- send a private message to user when download starts
+- send a private message to user when download finishes
+- support more then 1 server. if segment x isnt in server a,
+  then download in server b, if that fails server c, etc..
+- when we get currupt segment, subtract the segment from the total file size to get 
+  the new file size. update the gui to fix the false percentage/eta prediction
+- add bandwidth limit functionality (delay in between reads)
+- save last location of window to file, then load the window in that location when
+  the gui loads up
+- write into .nfo files more detailed explanation of verication errors
+- check bookmarks every 10 mins, but check autoload directory every x minutes
+- make a gui for the config file
+- in downloadgui.py override MainLoop() and exit safely (gui thread currently 
+  just hangs)
+- if there is a conflict while verifying (more then 1 initial par2 file) then
+  download all the par2 files so the user can check it manually.
+  OR
+  check each individual par2 file
+- remove .1 files after verification
+- memory leak when loading big nzb files (5MB file results in over 200MB mem)
